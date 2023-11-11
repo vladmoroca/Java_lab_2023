@@ -51,9 +51,5 @@ public class Lab2 {
             System.out.println("Average:");
             System.out.println(average);
         }
-        System.out.println("Transposed matrix:");
-        for (byte[] row : Trans) {
-        System.out.println(Arrays.toString(row));
-        }
     }
 }
