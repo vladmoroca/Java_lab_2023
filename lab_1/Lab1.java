@@ -11,6 +11,7 @@ public class Lab1 {
     С7 = 4
     i,j = short
     */
+    
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         
@@ -24,15 +25,18 @@ public class Lab1 {
         System.out.print("Enter m: ");
         short m = scanner.nextShort();
         if(m <= b) throw new Exception("m must be greater than b");
+        double result = Lab1.calculate(a,n,b,m);
+        System.out.println("S: " + (result != 0 ? result : "S is Undefined"));
+    }
         
-
+    private static double calculate(int a, int n, int b, int m){
         final int C = 2;
 
         double S = 0;
         loop:
-        for (short i = a; i <= n; i++) {
-            for (short j = b; j <= m; j++) {
-                if((i - C) == 0){
+        for (int i = a; i <= n; i++) {
+            for (int j = b; j <= m; j++) {
+                if((i - C) == 0 || j == 0){
                     System.out.println("Error: division by zero");
                     S = 0;
                     break loop;
@@ -41,6 +45,6 @@ public class Lab1 {
                 }
             }
         }
-        System.out.println("S: " + (S != 0 ? S : "S is Undefined"));
+        return S;
     }
 }

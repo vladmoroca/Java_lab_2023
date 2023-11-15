@@ -21,25 +21,36 @@ public class Lab2 {
         {21, -39, -53, 66, 11},
         {-83, 29, -18, 97, 5}
         };
-
-        byte[][] Trans = new byte[byteMatrix[0].length][byteMatrix.length];
+        byte[][] trans = transponse(byteMatrix);
+        double averageNum = average(trans);
+    }
+        
+    public static byte[][] transponse(byte[][] byteMatrix) throws Exception {
+        byte[][] trans = new byte[byteMatrix[0].length][byteMatrix.length];
 
         for (int i = 0; i < byteMatrix.length; i++) {
+            if(byteMatrix[i].length != byteMatrix[0].length){
+                throw new Exception("Incorrect matrix");
+            }
             for (int j = 0; j < byteMatrix[0].length; j++) {
-                Trans[j][i] = byteMatrix[i][j];
+                trans[j][i] = byteMatrix[i][j];
             }
         }
 
         System.out.println("Transposed matrix:");
-        for (byte[] row : Trans) {
-        System.out.println(Arrays.toString(row));
+        for (byte[] row : trans) {
+            System.out.println(Arrays.toString(row));
         }
+        return trans;
+    }
 
+    public static double average(byte[][] trans) throws Exception{
         int sum = 0;
         int num = 0;
-        for (int i = 0; i < Trans.length; i++) {
-            for (int j = 0; j < Trans[0].length; j++) {
-                sum += Trans[i][j];
+        double averageNum = 0;
+        for (int i = 0; i < trans.length; i++) {
+            for (int j = 0; j < trans[0].length; j++) {
+                sum += trans[i][j];
                 num += 1;
             }
         }
@@ -47,9 +58,10 @@ public class Lab2 {
         if (num == 0) {
             throw new Exception("Empty matrix");
         } else {
-            double average = (double)sum / num;
-            System.out.println("Average:");
-            System.out.println(average);
+            averageNum = (double)sum / num;
+            System.out.println("average:");
+            System.out.println(averageNum);
         }
+        return averageNum;
     }
 }
