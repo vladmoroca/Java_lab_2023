@@ -1,7 +1,5 @@
 package Java_lab_2023.lab_3;
 
-import java.util.Arrays;
-
 public class Lab3 {
     /* 
     variant 1121
