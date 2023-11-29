@@ -3,7 +3,7 @@ package Java_lab_2023.lab_5;
 import java.util.ArrayList;
 
 public class Word {
-    private final ArrayList<Letter> letters = new ArrayList<>();;
+    private ArrayList<Letter> letters = new ArrayList<>();;
 
     public Word(String word){
         for (String symbol : word.split("")) {

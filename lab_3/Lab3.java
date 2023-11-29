@@ -10,13 +10,12 @@ public class Lab3 {
     */
 
     public static void main(String[] args) throws Exception {
-        String new_text = parse("Some text with Letters hhhhhhhth");
+        String new_text = parse("Some text with Letters hhHhhhhth");
         System.out.println(new_text);
-
     }
 
     public static String parse(String Text) {
-        String[] words = Text.split(" ");
+        String[] words = Text.replaceAll("[\\p{P}]+", "").split(" ");
         for (int i = 0; i < words.length; i++) {
             words[i] = last_letter_delete(words[i]);
         }
@@ -27,6 +26,7 @@ public class Lab3 {
     public static String last_letter_delete(String word) {
         String lastLetter = word.substring(word.length() - 1);
         word = word.replaceAll(lastLetter, "");
+        word = word.replaceAll(lastLetter.toUpperCase(), "");
         word += lastLetter;
         return word;
     }

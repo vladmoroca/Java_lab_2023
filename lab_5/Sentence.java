@@ -2,7 +2,7 @@ package Java_lab_2023.lab_5;
 import java.util.ArrayList;
 
 public class Sentence {
-    private final ArrayList<Object> elements = new ArrayList<>();
+    private ArrayList<Object> elements = new ArrayList<>();
 
     public Sentence(String sentence){
         String[] elements = sentence.split(" ");
