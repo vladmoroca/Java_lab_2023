@@ -6,9 +6,9 @@ public class Sentence {
 
     public Sentence(String sentence){
         String[] elements = sentence.split(" ");
-        for (int i = 0; i < elements.length; i++) {
-            this.elements.add(new Word(elements[i].replaceAll("[\\p{P}]+", "")));
-            this.elements.add(new Mark(elements[i].replaceAll("[\\p{L}]+", "")));
+        for (String element : elements) {
+            this.elements.add(new Word(element.replaceAll("[\\p{P}]+", "")));
+            this.elements.add(new Mark(element.replaceAll("[\\p{L}]+", "")));
         }
     }
 
