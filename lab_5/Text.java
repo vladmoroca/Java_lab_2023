@@ -6,7 +6,7 @@ public class Text {
     private ArrayList<Sentence> sentences = new ArrayList<>();
 
     public Text(String text){
-        for (String sentence : text.split("(?=[.!?\n])")) {
+        for (String sentence : text.split("(?=[.!;?\n])")) {
             this.sentences.add(new Sentence(sentence));
         }
     }

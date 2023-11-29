@@ -14,7 +14,7 @@ public class lab5 {
         System.out.print("Enter text: ");
         String text = scanner.nextLine();
         */
-        String text = "Some text with, Letters hhhhhhth.! i ще кирилиця ";
+        String text = "Some text with, Letters hhhhhhth.! \n i ще кирилиця ";
         Text new_text = new Text(text);
         last_letter_delete(new_text);
         System.out.println(new_text.getText());
