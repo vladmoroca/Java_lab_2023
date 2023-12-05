@@ -19,14 +19,14 @@ public class lab6 {
         salat.addVegetble(tomat);
         salat.addVegetble(onion);
         salat.addVegetble(cucumber);
-        
+        System.out.println(salat.caloritySearch(50, 250));
         System.out.println(salat.calculateCalority());
         for (Vegetable veg : salat.getVegetables()) {
-            System.out.println(veg.toString());
+            System.out.println(veg);
         }
         salat.caloritySorting();
         for (Vegetable veg : salat.getVegetables()) {
-            System.out.println(veg.toString());
+            System.out.println(veg);
         }
     }
 }

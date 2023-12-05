@@ -1,0 +1,28 @@
+@startuml lab6
+class Vegetable {
+  - name: String
+  - calories: int
+  - ripeness: int
+}
+
+class Onion {
+  - pungency: int
+}
+
+class Tomato {
+  - size: int
+}
+
+class Cucumber {
+  - crunchiness: int
+}
+
+class Salad {
+  - vegetables: ArrayList<Vegetable>
+}
+
+Vegetable <|-- Tomato
+Vegetable <|-- Cucumber
+Vegetable <|-- Onion
+
+@enduml
