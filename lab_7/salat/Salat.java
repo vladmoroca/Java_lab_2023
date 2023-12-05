@@ -1,19 +1,23 @@
 package Java_lab_2023.lab_7.salat;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
+import Java_lab_2023.lab_7.MySet.MySet;
 import Java_lab_2023.lab_7.vegetables.*;
 
 public class Salat {
-    private ArrayList<Vegetable> vegetables = new ArrayList<>();
+    private MySet vegetables = new MySet();
 
     public void addVegetble(Vegetable vegetable){
         vegetables.add(vegetable);
     }
 
-    public ArrayList<Vegetable> getVegetables(){
+    public MySet getVegetables(){
         return vegetables;
     }
 
@@ -25,8 +29,8 @@ public class Salat {
         return calories;
     }
 
-    public ArrayList<Vegetable> caloritySearch(int from, int to){
-        ArrayList<Vegetable> found = new ArrayList<>();
+    public MySet caloritySearch(int from, int to){
+        MySet found = new MySet();
         for(Vegetable vegetable : vegetables){
             int calority = vegetable.getCalories();
             if(calority >= from && calority <= to){
@@ -37,6 +41,6 @@ public class Salat {
     }
 
     public void caloritySorting(){
-        Collections.sort(vegetables, Comparator.comparingInt(Vegetable::getCalories));
+        vegetables.sort(Comparator.comparingInt(Vegetable::getCalories));
     }    
 }

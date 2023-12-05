@@ -1,5 +1,9 @@
 package Java_lab_2023.lab_7.vegetables;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
+import Java_lab_2023.lab_4.Student;
 
 public class Vegetable {
     private String name;
