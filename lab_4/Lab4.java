@@ -19,12 +19,12 @@ public class Lab4 {
         System.out.println("age sorting");
         Student.sortByAge(students);
         for (Student stud : students) {
-            System.out.println(stud.toString());
+            System.out.println(stud);
         }
         System.out.println("score sorting");
         Student.sortByScore(students);
         for (Student stud : students) {
-            System.out.println(stud.toString());
+            System.out.println(stud);
         }
     }
 
