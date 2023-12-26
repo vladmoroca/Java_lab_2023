@@ -6,18 +6,19 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 import Java_lab_2023.lab_7.MySet.MySet;
 import Java_lab_2023.lab_7.vegetables.*;
 
 public class Salat {
-    private MySet vegetables = new MySet();
+    private Set<Vegetable> vegetables = new MySet();
 
     public void addVegetble(Vegetable vegetable){
         vegetables.add(vegetable);
     }
 
-    public MySet getVegetables(){
+    public Set<Vegetable> getVegetables(){
         return vegetables;
     }
 

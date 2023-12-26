@@ -16,14 +16,19 @@ public class lab6 {
         Cucumber cucumber = new Cucumber("just cucumber", 300, 5, 2);
 
         Salat salat = new Salat();
+
         salat.addVegetble(tomat);
         salat.addVegetble(onion);
         salat.addVegetble(cucumber);
+
         System.out.println(salat.caloritySearch(50, 250));
+
         System.out.println(salat.calculateCalority());
+
         for (Vegetable veg : salat.getVegetables()) {
             System.out.println(veg);
         }
+        
         salat.caloritySorting();
         for (Vegetable veg : salat.getVegetables()) {
             System.out.println(veg);
